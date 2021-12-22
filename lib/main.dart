@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-
-import 'Screens/home_view.dart';
+import 'package:my_contact_app/Screens/home_view.dart';
 
 
 void main() {
-  runApp(const ContactAPP());
+  runApp(const MyContactAPP());
 }
 
 
-class ContactAPP extends StatelessWidget {
-  const ContactAPP({ Key? key }) : super(key: key);
+class MyContactAPP extends StatelessWidget {
+  const MyContactAPP({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,12 @@ class ContactAPP extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "My Contact App",
       theme: ThemeData(
-      primaryColor: const Color.fromRGBO(11, 14, 69, 1),
+        fontFamily: "Satisfy",
+        iconTheme: const IconThemeData(color: Colors.white),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromRGBO(3, 5, 23, 1),
+          toolbarTextStyle: TextStyle(color: Colors.white)),
+      primaryColor: const Color.fromRGBO(3, 5, 23, 1),
       ),
       home: const HomeView(),
       
